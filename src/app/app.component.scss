@@ -1,11 +1,11 @@
- /*Now the CSS*/
- * {
+/*Now the CSS*/
+* {
   margin: 0;
   padding: 0;
 }
 
 .tree ul {
-  padding-top: 20px;
+  padding-top: 15px;
   position: relative;
 
   transition: all 0.5s;
@@ -85,20 +85,20 @@ right connector from last child*/
   height: 20px;
 }
 
-.tree li a {
+.tree li div {
   /* border: 1px solid #ccc;
   padding: 5px 10px; */
   text-decoration: none;
-  color: #333;
+  color: #fff;
 
   font-size: 25px;
   width: 0;
   height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 100px solid red;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 80px solid red;
   display: inline-block;
-
+  position: relative;
   /* border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -106,6 +106,36 @@ right connector from last child*/
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s; */
+}
+
+.tree li div p {
+  position: absolute;
+  top: 30px;
+  width: 150px;
+  text-align: center;
+  left: -75px;
+}
+
+.bottom {
+  text-decoration: none;
+  color: #fff;
+  font-size: 25px;
+  position: relative;
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent !important;
+  border-right: 40px solid transparent !important;
+  border-top: 80px solid red !important;
+  border-bottom: unset !important;
+  display: inline-block;
+}
+
+.bottom p {
+  position: absolute !important;
+  top: -75px !important;
+  width: 150px !important;
+  left: -75px !important;
+  text-align: center !important;
 }
 
 /*Time for some hover effects*/
@@ -123,6 +153,3 @@ right connector from last child*/
 .tree li a:hover + ul ul::before {
   border-color: #94a0b4;
 } */
-.col-md-8{
-  overflow: auto;
-}
