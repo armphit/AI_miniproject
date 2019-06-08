@@ -1,101 +1,145 @@
 <div class="row">
-  <div class="col-md-12 text-center">
+  <div class="col-md-2 col-lg-3 text-center"></div>
+  <div class="col-md-10 col-lg-9 text-center">
+    <br />
+    <br />
     <div class="tree">
       <ul>
         <li>
-          <div href="#">
+          <div href="#" id="{{ readKeyname()[0] }}" class="topNode">
             <p>
-              150
+              {{ numberNode[readKeyname()[0]] }}
             </p>
+            <span>
+              {{ numberNode["n0l"] == 0 ? "-infinity" : numberNode["n0l"] }},
+              {{ numberNode["n0r"] == 0 ? "+infinity" : numberNode["n0r"] }}
+            </span>
           </div>
           <ul>
             <li>
-              <div href="#" class="bottom">
+              <div href="#" class="bottom" id="{{ readKeyname()[1] }}">
                 <p>
-                  225
+                  {{ numberNode[readKeyname()[1]] }}
                 </p>
+                <span>
+                  {{
+                    numberNode["n1l"] == 0 ? "-infinity" : numberNode["n1l"]
+                  }},
+                  {{ numberNode["n1r"] == 0 ? "+infinity" : numberNode["n1r"] }}
+                </span>
               </div>
               <ul>
                 <li>
-                  <div href="#">
+                  <div href="#" id="{{ readKeyname()[4] }}">
                     <p>
-                      225
+                      {{ numberNode[readKeyname()[4]] }}
                     </p>
-                  </div>
+                  </div><br>
+                  <input type="number" #node4  maxlength="1" style="width:100px;" >
+
                 </li>
                 <li>
-                  <div href="#">
+                  <div href="#" id="{{ readKeyname()[5] }}">
                     <p>
-                      225
+                      {{ numberNode[readKeyname()[5]] }}
                     </p>
-                  </div>
+                  </div><br>
+                  <input type="number" #node5 maxlength="1" style="width:100px;" >
+
                 </li>
                 <li>
-                  <div href="#">
+                  <div href="#" id="{{ readKeyname()[6] }}">
                     <p>
-                      225
+                      {{ numberNode[readKeyname()[6]] }}
+
                     </p>
-                  </div>
+                  </div> <br>
+                  <input type="number" #node6 maxlength="1" style="width:100px;" >
                 </li>
               </ul>
             </li>
             <li>
-              <div href="#" class="bottom">
+              <div href="#" class="bottom" id="{{ readKeyname()[2] }}">
                 <p>
-                  225
+                  {{ numberNode[readKeyname()[2]] }}
                 </p>
+                <span>
+                  {{
+                    numberNode["n2l"] == 0 ? "-infinity" : numberNode["n2l"]
+                  }},
+                  {{ numberNode["n2r"] == 0 ? "+infinity" : numberNode["n2r"] }}
+                </span>
               </div>
               <ul>
                 <li>
-                  <div href="#">
+                  <div href="#" id="{{ readKeyname()[7] }}">
                     <p>
-                      225
+                      {{ numberNode[readKeyname()[7]] }}
                     </p>
-                  </div>
+                  </div><br>
+                  <input type="number" #node7 maxlength="1" style="width:100px;" >
+
                 </li>
                 <li>
-                  <div href="#">
+                  <div href="#" id="{{ readKeyname()[8] }}">
                     <p>
-                      225
+                      {{ numberNode[readKeyname()[8]] }}
                     </p>
-                  </div>
+                  </div><br>
+                  <input type="number" #node8 maxlength="1" style="width:100px;" >
+
                 </li>
                 <li>
-                  <div href="#">
+                  <div href="#" id="{{ readKeyname()[9] }}">
                     <p>
-                      225
+                      {{ numberNode[readKeyname()[9]] }}
                     </p>
                   </div>
+                  <br>
+                  <input type="number" #node9 maxlength="1" style="width:100px;" >
                 </li>
               </ul>
             </li>
             <li>
-              <div href="#" class="bottom">
+              <div href="#" class="bottom" id="{{ readKeyname()[3] }}">
                 <p>
-                  225
+                  {{ numberNode[readKeyname()[3]] }}
                 </p>
+                <span>
+                  {{
+                    numberNode["n3l"] == 0 ? "-infinity" : numberNode["n3l"]
+                  }},
+                  {{ numberNode["n3r"] == 0 ? "+infinity" : numberNode["n3r"] }}
+                </span>
               </div>
+
               <ul>
                 <li>
-                  <div href="#">
+                  <div href="#" id="{{ readKeyname()[10] }}">
                     <p>
-                      225
+                      {{ numberNode[readKeyname()[10]] }}
                     </p>
-                  </div>
+                  </div><br>
+                  <input type="number" #node10  maxlength="1" style="width:100px;" >
+
                 </li>
                 <li>
-                  <div href="#">
+                  <div href="#" id="{{ readKeyname()[11] }}">
                     <p>
-                      225
+                      {{ numberNode[readKeyname()[11]] }}
                     </p>
                   </div>
+                  <br>
+                  <input type="number" #node11 maxlength="1" style="width:100px;" >
                 </li>
                 <li>
-                  <div href="#">
+                  <div href="#" id="{{ readKeyname()[12] }}">
                     <p>
-                      225
+                      {{ numberNode[readKeyname()[12]] }}
                     </p>
                   </div>
+                  <br>
+                  <input type="number"  #node12 maxlength="1" style="width:100px;" >
                 </li>
               </ul>
             </li>
@@ -104,5 +148,71 @@
       </ul>
     </div>
   </div>
-
 </div>
+
+<div class="col-md-10" style="margin-top:50px;">
+  <div class="col-md text-center">
+    <div>
+      <button mat-raised-button color="primary" (click)="add(node4.value,node5.value,node6.value,node7.value,node8.value,node9.value,node10.value,node11.value,node12.value)">
+        ส่งค่า
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-10" style="margin-top:50px;">
+  <div class="col-md text-center">
+
+    <div>
+      <button mat-raised-button color="primary" (click)="randomNumber()">
+        สุ่มเลข
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<div class="col-md-10" style="margin-top:50px;">
+  <div class="col-md text-center">
+    <div>
+      <button mat-raised-button color="primary" (click)="reset2()" onclick= "document.location.reload(true)">
+        รีเซ็ต
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<div class="col-md-10" style="margin-top:50px;">
+  <div class="col-md text-center">
+    <div>
+      <button mat-raised-button color="primary" (click)="start()">
+        เริ่ม
+      </button>
+    </div>
+  </div>
+</div>
+
+<div  style="margin-top:20px;">
+  <div class="col-md text-center">
+
+
+<!-- <div class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div> -->

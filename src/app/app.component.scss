@@ -116,6 +116,16 @@ right connector from last child*/
   left: -75px;
 }
 
+.topNode span {
+  position: absolute !important;
+  top: 25px !important;
+  width: 150px !important;
+  left: 20px !important;
+  text-align: center !important;
+  color: #333 !important;
+  font-size: 17px !important;
+}
+
 .bottom {
   text-decoration: none;
   color: #fff;
@@ -123,9 +133,9 @@ right connector from last child*/
   position: relative;
   width: 0;
   height: 0;
-  border-left: 40px solid transparent !important;
-  border-right: 40px solid transparent !important;
-  border-top: 80px solid red !important;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 80px solid red;
   border-bottom: unset !important;
   display: inline-block;
 }
@@ -136,6 +146,29 @@ right connector from last child*/
   width: 150px !important;
   left: -75px !important;
   text-align: center !important;
+}
+.bottom span {
+  position: absolute !important;
+  top: -65px !important;
+  width: 150px !important;
+  left: 20px !important;
+  text-align: center !important;
+  color: #333 !important;
+  font-size: 17px !important;
+}
+
+.readNodeTop{
+  border-top: 80px solid blue !important;
+}
+
+.readNodeBottom{
+  border-bottom: 80px solid blue !important;
+}
+.readNodelasttop{
+  border-top: 80px solid black !important;
+}
+.readNodelastbootom{
+  border-bottom: 80px solid black !important;
 }
 
 /*Time for some hover effects*/
